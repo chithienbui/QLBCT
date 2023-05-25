@@ -1,0 +1,58 @@
+﻿@model IEnumerable<DoAnQLBCT.Models.CTHD>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaHD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoLuong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HoaDon.DiaChiNhan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MatHang.TenMH)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        if (item.MaHD == ViewBag.MaHD)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaHD)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SoLuong)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gia)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HoaDon.DiaChiNhan)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MatHang.TenMH)
+                </td>
+
+            </tr>
+        }
+
+    }
+
+</table>

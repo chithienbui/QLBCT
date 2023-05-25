@@ -1,0 +1,74 @@
+﻿@model DoAnQLBCT.Models.MatHang
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MatHang</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenMH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenMH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoLuongTon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuongTon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GiaMH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GiaMH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MoTa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MoTa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnhMH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnhMH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LoaiMH.TenLMH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoaiMH.TenLMH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NCC.TenNCC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NCC.TenNCC)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaMH }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

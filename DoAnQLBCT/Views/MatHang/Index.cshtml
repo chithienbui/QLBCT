@@ -1,0 +1,70 @@
+﻿@model IEnumerable<DoAnQLBCT.Models.MatHang>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenMH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoLuongTon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GiaMH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MoTa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnhMH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LoaiMH.TenLMH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NCC.TenNCC)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenMH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoLuongTon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GiaMH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MoTa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnhMH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoaiMH.TenLMH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NCC.TenNCC)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaMH }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaMH }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaMH })
+        </td>
+    </tr>
+}
+
+</table>
